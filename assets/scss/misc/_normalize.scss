@@ -1,0 +1,25 @@
+/* Normalize */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: {
+        image:$fondoPantallaBanco;
+        repeat:no-repeat;
+        size:cover; 
+        attachment: fixed;
+    };
+
+    color: $colorBlanco;
+    
+    font: {
+        family:$font-family-RussoOne;
+        size: 15px; 
+    }
+
+
+}

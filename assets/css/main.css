@@ -1,0 +1,16 @@
+/* VARIABLES COLORES */
+/* VARIABLES IMAGENES FONDOS PANTALLA Y COLORES DE FONDO */
+/* Normalize */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("/assets/image/imagen_banco.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.form-login {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
