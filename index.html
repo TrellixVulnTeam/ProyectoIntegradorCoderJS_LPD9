@@ -21,19 +21,19 @@
             <div class="col">
                 <h2 class="text-center pt-4">HOMEBANKING LOGIN</span></h2>
 
-                <form class="form-login p-4" action="" method="post">
+                <form class="form-login p-4" method="post">
                     <div class="mb-4">
                         <label for="email" class="form-label">CORREO ELECTRÓNICO</label>
-                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico" id="email">
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico" id="correo">
                         <p class="warning-email" id="warning-email"></p>
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">CONTRASEÑA</label>
-                        <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña" maxlength="8" id="password">
+                        <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña" minlength="8" maxlength="10" id="contraseña">
                         <p class="warning-password" id="warning-password"></p>
                     </div>
                     <div class="d-grid">
-                        <input type="button" onclick="ingresar()" value="INICIAR SESIÓN" class="btn btn-primary" name="" id="">
+                        <input type="button" onclick="cargarUsuario()" value="INICIAR SESIÓN" class="btn btn-primary" name="" id="">
                         <!-- <button type="submit" class="btn btn-primary"><a class="inicio-sesion" href="/home.html">Iniciar Sesión</a></button> -->
                     </div>
 
