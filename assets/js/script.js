@@ -44,7 +44,26 @@ const usuarios = [{
 
 const correoUsuario = document.getElementById("correo")
 const contraseñaUsuario = document.getElementById("contraseña")
-
+const botonIniciarSesion = document.getElementById("iniciar-sesion")
+botonIniciarSesion.addEventListener("click", validarUsuario)
+const botonRegistrarUsuario = document.getElementById("registrar-usuario")
+botonRegistrarUsuario.addEventListener("click", function(){
+    alert("Esta funcionalidad está en proceso")
+})
+const botonRecuperarContraseña = document.getElementById("recuperar-contraseña")
+botonRecuperarContraseña.addEventListener("click", function(){
+    alert("Esta funcionalidad está en proceso")
+})
+const botonFacebook = document.getElementById("boton-facebook")
+botonFacebook.addEventListener("click", function(){
+    alert("Redireccionando a Facebook")
+    window.location.href = "https://www.facebook.com"
+})
+const botonInstagram = document.getElementById("boton-instagram")
+botonInstagram.addEventListener("click", function(){
+    alert("Redireccionando a Instagram")
+    window.location.href = "https://www.instagram.com"
+})
 
 
 
@@ -57,6 +76,7 @@ function validarUsuario(){
         if(validar){
             alert("Usuario encontrado. Acceso exitoso")
             window.location = "/assets/pages/home.html"
+            const h1HomeBienvenido = document.getElementById("h1-home-bienvenido")
         }else{
             alert("Usuario no encontrado.")
         }
