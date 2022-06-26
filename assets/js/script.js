@@ -1,4 +1,4 @@
-const usuarios = [{
+export const usuarios = [{
     id: 1,
     nombre: 'diego',
     apellido: 'suarez',
@@ -46,9 +46,9 @@ const correoUsuario = document.getElementById("correo")
 const contraseñaUsuario = document.getElementById("contraseña")
 const botonIniciarSesion = document.getElementById("iniciar-sesion")
 botonIniciarSesion.addEventListener("click", validarUsuario)
-const botonRegistrarUsuario = document.getElementById("registrar-usuario")
-botonRegistrarUsuario.addEventListener("click", function(){
-    alert("Esta funcionalidad está en proceso")
+const botonRegistrame = document.getElementById("registrame")
+botonRegistrame.addEventListener("click", function(){
+    window.location = "/assets/pages/registroUsuario.html"
 })
 const botonRecuperarContraseña = document.getElementById("recuperar-contraseña")
 botonRecuperarContraseña.addEventListener("click", function(){
@@ -65,16 +65,11 @@ botonInstagram.addEventListener("click", function(){
     window.location.href = "https://www.instagram.com"
 })
 
-
-
 function validarUsuario(){
-    debugger
     if(correoUsuario.value != "" && contraseñaUsuario.value != ""){
         
         const validar = usuarios.some(usuario => usuario.correo === correoUsuario.value && usuario.contraseña === contraseñaUsuario.value)
-
         if(validar){
-            alert("Usuario encontrado. Acceso exitoso")
             window.location = "/assets/pages/home.html"
             const h1HomeBienvenido = document.getElementById("h1-home-bienvenido")
         }else{
@@ -92,5 +87,7 @@ function limpiarCampos(){
     document.getElementById("correo").value = ""
     document.getElementById("contraseña").value = ""
 }
+
+
 
 
