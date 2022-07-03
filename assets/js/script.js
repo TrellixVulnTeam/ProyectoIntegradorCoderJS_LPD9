@@ -1,4 +1,4 @@
-export const usuarios = [{
+const usuarios = [{
     id: 1,
     nombre: 'diego',
     apellido: 'suarez',
@@ -40,7 +40,7 @@ export const usuarios = [{
 }]
 
 
-
+//variables del login
 
 const correoUsuario = document.getElementById("correo")
 const contraseñaUsuario = document.getElementById("contraseña")
@@ -67,19 +67,38 @@ botonInstagram.addEventListener("click", function(){
 
 function validarUsuario(){
     if(correoUsuario.value != "" && contraseñaUsuario.value != ""){
-        
+        let usuarios = JSON.parse(localStorage.getItem("usuarios"))
+        if(usuarios === null){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Usuario no existente'
+            })
+        }else{
         const validar = usuarios.some(usuario => usuario.correo === correoUsuario.value && usuario.contraseña === contraseñaUsuario.value)
         if(validar){
+            Swal.fire({
+                icon: 'success',
+                title: 'Oops...',
+                text: 'Bienvenido'
+            })
             window.location = "/assets/pages/home.html"
-            const h1HomeBienvenido = document.getElementById("h1-home-bienvenido")
         }else{
-            alert("Usuario no encontrado.")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Usuario y/o contraseña no válido'
+            })
         }
-    
+        }
         limpiarCampos()
     
     }else{
-        alert("Debe completar los campos correo y contraseña. No pueden estar vacios")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debe completar los campos correo y contraseña'
+        })
     }
 }
 
