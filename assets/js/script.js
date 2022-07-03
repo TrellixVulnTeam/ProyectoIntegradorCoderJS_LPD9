@@ -1,45 +1,3 @@
-const usuarios = [{
-    id: 1,
-    nombre: 'diego',
-    apellido: 'suarez',
-    edad: 25,
-    correo: 'diego@gmail.com',
-    contraseña: '1234'
-},
-{
-    id: 2,
-    nombre: 'tomas',
-    apellido: 'lopez',
-    edad: 31,
-    correo: 'tomas@gmail.com',
-    contraseña: '1990'
-},
-{
-    id:3,
-    nombre: 'eugenia',
-    apellido: 'balmaceda',
-    edad: 20,
-    correo: 'eugenia@gmail.com',
-    contraseña: '1445'
-},
-{
-    id:4,
-    nombre: 'georgina',
-    apellido: 'velez',
-    edad: 38,
-    correo: 'georgina@gmail.com',
-    contraseña: '1667'
-},
-{
-    id:5,
-    nombre: 'ruben',
-    apellido: 'toranzo',
-    edad: 29,
-    correo: 'ruben@gmail.com',
-    contraseña: '1330'
-}]
-
-
 //variables del login
 
 const correoUsuario = document.getElementById("correo")
@@ -52,7 +10,11 @@ botonRegistrame.addEventListener("click", function(){
 })
 const botonRecuperarContraseña = document.getElementById("recuperar-contraseña")
 botonRecuperarContraseña.addEventListener("click", function(){
-    alert("Esta funcionalidad está en proceso")
+    Swal.fire({
+        icon: 'info',
+        title: 'Ooops',
+        text: 'Esta funcionalidad está en proceso!'
+        })
 })
 const botonFacebook = document.getElementById("boton-facebook")
 botonFacebook.addEventListener("click", function(){

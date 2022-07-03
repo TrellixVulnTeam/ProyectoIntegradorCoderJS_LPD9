@@ -46,18 +46,17 @@ function registrarNuevoUsuario(){
                  icon: 'error',
                  title: 'Oops...',
                 text: 'Ya existe un usuario con ese correo registrado'
-        })
-    }else{
-        usuarios.push(nuevoUsuario)
-        localStorage.setItem("usuarios", JSON.stringify(usuarios))
-        Swal.fire({
-        icon: 'success',
-        title: 'Geniaaal!',
-        text: 'Se ha registrado con éxito'
-        })
-        limpiarCampos()
-    }
-    }
+            })}else{
+            usuarios.push(nuevoUsuario)
+            localStorage.setItem("usuarios", JSON.stringify(usuarios))
+            Swal.fire({
+            icon: 'success',
+            title: 'Geniaaal!',
+            text: 'Se ha registrado con éxito'
+            })
+            limpiarCampos()
+            }
+            }
     }else{
         Swal.fire({
             icon: 'error',
@@ -73,16 +72,4 @@ function limpiarCampos(){
     document.getElementById("edadRegistro").value = ""
     document.getElementById("correoRegistro").value = ""
     document.getElementById("contraseñaRegistro").value = ""
-}
-
-
-function validarSiCorreoYaExiste(usuarios){
-    const validar = usuarios.some(usuario => usuario.correo === correoRegistroUsuario.value)
-    if(validar){
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Ya existe un usuario con ese correo registrado'
-        })
-    }
 }
