@@ -10,11 +10,7 @@ botonRegistrame.addEventListener("click", function(){
 })
 const botonRecuperarContraseña = document.getElementById("recuperar-contraseña")
 botonRecuperarContraseña.addEventListener("click", function(){
-    Swal.fire({
-        icon: 'info',
-        title: 'Ooops',
-        text: 'Esta funcionalidad está en proceso!'
-        })
+    window.location.href = "/assets/pages/recuperarContraseña.html"
 })
 const botonFacebook = document.getElementById("boton-facebook")
 botonFacebook.addEventListener("click", function(){
@@ -41,8 +37,8 @@ function validarUsuario(){
         if(validar){
             Swal.fire({
                 icon: 'success',
-                title: 'Oops...',
-                text: 'Bienvenido'
+                title: 'Genial...',
+                text: 'Bienvenido!!'
             })
             window.location = "/assets/pages/home.html"
         }else{
